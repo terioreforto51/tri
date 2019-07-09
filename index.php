@@ -26,7 +26,7 @@
        <input type="submit" name="load_data" value="Load Data" />
  </form>
  <?php 
-    $host = "<tcp:triserver.database.windows.net, 1433>";
+    $host = "<triserver.database.windows.net>";
     $user = "<terioreforto>";
     $pass = "<12Oktober>";
     $db = "<tri>";
