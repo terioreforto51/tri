@@ -25,7 +25,7 @@
        <input type="submit" name="submit" value="Submit" />
        <input type="submit" name="load_data" value="Load Data" />
  </form>
- <?php
+ <?php 
     $host = "<triserver.database.windows.net>";
     $user = "<terioreforto>";
     $pass = "<12Oktober>";
