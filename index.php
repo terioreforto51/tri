@@ -1,10 +1,10 @@
 <html>
  <head>
- <Title>Registration Form</Title>
+ <Title>Selamat Datang di Web Bacrit</Title>
  <style type="text/css">
  	body { background-color: #fff; border-top: solid 10px #000;
  	    color: #333; font-size: .85em; margin: 20; padding: 20;
- 	    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+ 	    font-family: "Segoe UI", Times new roman, Helvetica, Sans-Serif;
  	}
  	h1, h2, h3,{ color: #000; margin-bottom: 0; padding-bottom: 0; }
  	h1 { font-size: 2em; }
@@ -16,8 +16,8 @@
  </style>
  </head>
  <body>
- <h1>Register here!</h1>
- <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
+ <h1>Daftar dulu gan!</h1>
+ <p>Tolong daftar dulu ya, nanti keciduk balmon <strong>Submit</strong> to register.</p>
  <form method="post" action="index.php" enctype="multipart/form-data" >
        Name  <input type="text" name="name" id="name"/></br></br>
        Email <input type="text" name="email" id="email"/></br></br>
@@ -58,19 +58,19 @@ catch (PDOException $e) {
             echo "Failed: " . $e;
         }
 
-        echo "<h3>Your're registered!</h3>";
+        echo "<h3>Selamat, Kamu terdaftar!</h3>";
     } else if (isset($_POST['load_data'])) {
         try {
             $sql_select = "SELECT * FROM Registration";
             $stmt = $conn->query($sql_select);
             $registrants = $stmt->fetchAll(); 
             if(count($registrants) > 0) {
-                echo "<h2>People who are registered:</h2>";
+                echo "<h2>User yang telah mendaftar:</h2>";
                 echo "<table>";
-                echo "<tr><th>Name</th>";
+                echo "<tr><th>Nama</th>";
                 echo "<th>Email</th>";
-                echo "<th>Job</th>";
-                echo "<th>Date</th></tr>";
+                echo "<th>Pekerjaan</th>";
+                echo "<th>Hari</th></tr>";
                 foreach($registrants as $registrant) {
                     echo "<tr><td>".$registrant['name']."</td>";
                     echo "<td>".$registrant['email']."</td>";
